@@ -94,10 +94,10 @@ caller code.
 
 =head1 BUGS
 
-If you code has C<__DATA__> somewhere else in the code, this module
-might be tricked by that (though since its match is greedy,
-C<__DATA__> appearing I<before> the actual data section might be
-okay).
+If you data section has literal C<__DATA__> in the data section, this
+module might be tricked by that. Although since its pattern match is
+greedy, C<__DATA__> appearing I<before> the actual data section
+(i.e. in the code) might be okay.
 
 This is by design -- in thoery you can C<tell> the DATA handle before
 reading it, but then reloading the data section of the file (handy for
