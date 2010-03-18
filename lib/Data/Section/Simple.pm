@@ -81,15 +81,16 @@ C<__DATA__> section of the file.
 
 =head1 LIMITATIONS
 
-As the name suggests, it's a very simple version of what
-L<Data::Section> does. If you want more functionalities such as
+As the name suggests, this module is a simpler version of the
+excellent L<Data::Section>. If you want more functionalities such as
 merging data sections or changing header patterns, use
 L<Data::Section> instead.
 
 This module does not implement caching (yet) which means in every
-C<get_data_section> or C<< get_data_section($name) >> seeks and reads
-the data section every time it's called. If you want to avoid doing
-so, you should implement caching in your own caller code.
+C<get_data_section> or C<< get_data_section($name) >> this module
+seeks and re-reads the data section. If you want to avoid doing so for
+the better performance, you should implement caching in your own
+caller code.
 
 =head1 AUTHOR
 
