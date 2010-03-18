@@ -79,9 +79,17 @@ Data::Section::Simple - Read data from __DATA__
 Data::Section::Simple is a simple module to extract data drom
 C<__DATA__> section of the file.
 
-As the name suggests, it's a very simpler version of what
+=head1 LIMITATIONS
+
+As the name suggests, it's a very simple version of what
 L<Data::Section> does. If you want more functionalities such as
-merging data section, use L<Data::Section> instead.
+merging data sections or changing header patterns, use
+L<Data::Section> instead.
+
+This module does not implement caching (yet) which means in every
+C<get_data_section> or C<< get_data_section($name) >> seeks and reads
+the data section every time it's called. If you want to avoid doing
+so, you should implement caching in your own caller code.
 
 =head1 AUTHOR
 
