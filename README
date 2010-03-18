@@ -28,9 +28,15 @@ DESCRIPTION
     Data::Section::Simple is a simple module to extract data drom "__DATA__"
     section of the file.
 
-    As the name suggests, it's a very simpler version of what Data::Section
-    does. If you want more functionalities such as merging data section, use
-    Data::Section instead.
+LIMITATIONS
+    As the name suggests, it's a very simple version of what Data::Section
+    does. If you want more functionalities such as merging data sections or
+    changing header patterns, use Data::Section instead.
+
+    This module does not implement caching (yet) which means in every
+    "get_data_section" or "get_data_section($name)" seeks and reads the data
+    section every time it's called. If you want to avoid doing so, you
+    should implement caching in your own caller code.
 
 AUTHOR
     Tatsuhiko Miyagawa <miyagawa@bulknews.net>
