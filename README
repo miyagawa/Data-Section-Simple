@@ -29,14 +29,27 @@ DESCRIPTION
     section of the file.
 
 LIMITATIONS
-    As the name suggests, it's a very simple version of what Data::Section
-    does. If you want more functionalities such as merging data sections or
-    changing header patterns, use Data::Section instead.
+    As the name suggests, this module is a simpler version of the excellent
+    Data::Section. If you want more functionalities such as merging data
+    sections or changing header patterns, use Data::Section instead.
 
     This module does not implement caching (yet) which means in every
-    "get_data_section" or "get_data_section($name)" seeks and reads the data
-    section every time it's called. If you want to avoid doing so, you
-    should implement caching in your own caller code.
+    "get_data_section" or "get_data_section($name)" this module seeks and
+    re-reads the data section. If you want to avoid doing so for the better
+    performance, you should implement caching in your own caller code.
+
+BUGS
+    If you data section has literal "__DATA__" in the data section, this
+    module might be tricked by that. Although since its pattern match is
+    greedy, "__DATA__" appearing *before* the actual data section (i.e. in
+    the code) might be okay.
+
+    This is by design -- in thoery you can "tell" the DATA handle before
+    reading it, but then reloading the data section of the file (handy for
+    developing inline templates with PSGI web applications) would fail
+    because the pos would be changed.
+
+    If you don't like this design, again, use the superior Data::Section.
 
 AUTHOR
     Tatsuhiko Miyagawa <miyagawa@bulknews.net>

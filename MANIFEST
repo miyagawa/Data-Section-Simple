@@ -17,6 +17,8 @@ META.yml
 README
 t/00_compile.t
 t/basic.t
+t/data.t
+t/DataInCode.pm
 t/Foo.pm
 t/pkg_oo.t
 xt/pod.t
