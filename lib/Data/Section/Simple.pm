@@ -94,6 +94,8 @@ caller code.
 
 =head1 BUGS
 
+=head2 __DATA__ appearing elsewhere
+
 If you data section has literal C<__DATA__> in the data section, this
 module might be tricked by that. Although since its pattern match is
 greedy, C<__DATA__> appearing I<before> the actual data section
@@ -106,6 +108,15 @@ because the pos would be changed.
 
 If you don't like this design, again, use the superior
 L<Data::Section>.
+
+=head2 utf8 pragma
+
+If you enable L<utf8> pragma in the caller's package (or the package
+you're inspecting with the OO interface), the data retrieved via
+C<get_data_section> is decoded, but otherwise undecoded. There's no
+reliable way for this module to programatically know whether utf8
+pragma is enabled or not: it's your responsibility to handle them
+correctly.
 
 =head1 AUTHOR
 
