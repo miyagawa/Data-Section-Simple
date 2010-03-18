@@ -19,7 +19,7 @@ sub get_data_section {
         return $self->get_data_section->{$_[0]};
     } else {
         my $d = do { no strict 'refs'; \*{$self->{package}."::DATA"} };
-        return unless fileno $d;
+        return unless defined fileno $d;
 
         seek $d, 0, 0;
         my $content = join '', <$d>;
