@@ -92,6 +92,21 @@ seeks and re-reads the data section. If you want to avoid doing so for
 the better performance, you should implement caching in your own
 caller code.
 
+=head1 BUGS
+
+If you code has C<__DATA__> somewhere else in the code, this module
+might be tricked by that (though since its match is greedy,
+C<__DATA__> appearing I<before> the actual data section might be
+okay).
+
+This is by design -- in thoery you can C<tell> the DATA handle before
+reading it, but then reloading the data section of the file (handy for
+developing inline templates with PSGI web applications) would fail
+because the pos would be changed.
+
+If you don't like this design, again, use the superior
+L<Data::Section>.
+
 =head1 AUTHOR
 
 Tatsuhiko Miyagawa E<lt>miyagawa@bulknews.netE<gt>
