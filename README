@@ -25,7 +25,7 @@ SYNOPSIS
       [% END %]
 
 DESCRIPTION
-    Data::Section::Simple is a simple module to extract data drom "__DATA__"
+    Data::Section::Simple is a simple module to extract data from "__DATA__"
     section of the file.
 
 LIMITATIONS
@@ -44,7 +44,7 @@ BUGS
     greedy, "__DATA__" appearing *before* the actual data section (i.e. in
     the code) might be okay.
 
-    This is by design -- in thoery you can "tell" the DATA handle before
+    This is by design -- in theory you can "tell" the DATA handle before
     reading it, but then reloading the data section of the file (handy for
     developing inline templates with PSGI web applications) would fail
     because the pos would be changed.

@@ -76,7 +76,7 @@ Data::Section::Simple - Read data from __DATA__
 
 =head1 DESCRIPTION
 
-Data::Section::Simple is a simple module to extract data drom
+Data::Section::Simple is a simple module to extract data from
 C<__DATA__> section of the file.
 
 =head1 LIMITATIONS
@@ -101,7 +101,7 @@ module might be tricked by that. Although since its pattern match is
 greedy, C<__DATA__> appearing I<before> the actual data section
 (i.e. in the code) might be okay.
 
-This is by design -- in thoery you can C<tell> the DATA handle before
+This is by design -- in theory you can C<tell> the DATA handle before
 reading it, but then reloading the data section of the file (handy for
 developing inline templates with PSGI web applications) would fail
 because the pos would be changed.
@@ -114,7 +114,7 @@ L<Data::Section>.
 If you enable L<utf8> pragma in the caller's package (or the package
 you're inspecting with the OO interface), the data retrieved via
 C<get_data_section> is decoded, but otherwise undecoded. There's no
-reliable way for this module to programatically know whether utf8
+reliable way for this module to programmatically know whether utf8
 pragma is enabled or not: it's your responsibility to handle them
 correctly.
 
