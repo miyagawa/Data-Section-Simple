@@ -1,5 +1,9 @@
 Revision history for Perl extension Data::Section::Simple
 
+0.03  Sun Sep 18 12:35:54 PDT 2011
+        - Noted the use of utf8 pragma
+        - Doc typo fixes (Util)
+
 0.02  Thu Mar 18 15:14:44 PDT 2010
         - Added a warning document about __DATA__ appearing elsewhere (rjbs)
         - Fixed a bug installing via cpanm often fails because fileno $d

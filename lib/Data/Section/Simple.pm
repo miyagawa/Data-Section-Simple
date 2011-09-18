@@ -2,7 +2,7 @@ package Data::Section::Simple;
 
 use strict;
 use 5.008_001;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base qw(Exporter);
 our @EXPORT_OK = qw(get_data_section);

@@ -39,6 +39,7 @@ LIMITATIONS
     performance, you should implement caching in your own caller code.
 
 BUGS
+  __DATA__ appearing elsewhere
     If you data section has literal "__DATA__" in the data section, this
     module might be tricked by that. Although since its pattern match is
     greedy, "__DATA__" appearing *before* the actual data section (i.e. in
@@ -50,6 +51,14 @@ BUGS
     because the pos would be changed.
 
     If you don't like this design, again, use the superior Data::Section.
+
+  utf8 pragma
+    If you enable utf8 pragma in the caller's package (or the package you're
+    inspecting with the OO interface), the data retrieved via
+    "get_data_section" is decoded, but otherwise undecoded. There's no
+    reliable way for this module to programmatically know whether utf8
+    pragma is enabled or not: it's your responsibility to handle them
+    correctly.
 
 AUTHOR
     Tatsuhiko Miyagawa <miyagawa@bulknews.net>
