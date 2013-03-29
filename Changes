@@ -2,6 +2,9 @@ Revision history for Perl extension Data::Section::Simple
 
 {{$NEXT}}
 
+0.04  2013-03-28 17:50:48 PDT
+        - Do not throw exceptions when there's no template (tokuhirom) #2
+
 0.03  Sun Sep 18 12:35:54 PDT 2011
         - Noted the use of utf8 pragma
         - Doc typo fixes (Util)
