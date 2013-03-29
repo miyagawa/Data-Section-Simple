@@ -1,0 +1,53 @@
+{
+   "abstract" : "Read data from __DATA__",
+   "author" : [
+      "Tatsuhiko Miyagawa <miyagawa@bulknews.net>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Milla version v0.9.1, Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.130870",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Data-Section-Simple",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.013"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::Pod" : "1.41"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.88",
+            "Test::Requires" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/miyagawa/Data-Section-Simple/issues"
+      },
+      "homepage" : "https://github.com/miyagawa/Data-Section-Simple",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/miyagawa/Data-Section-Simple.git",
+         "web" : "https://github.com/miyagawa/Data-Section-Simple"
+      }
+   },
+   "version" : "0.03"
+}
+

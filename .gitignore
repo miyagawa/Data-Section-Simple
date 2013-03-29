@@ -1,5 +1,6 @@
 META.yml
-Makefile
-inc/
-pm_to_blib
+!META.json
+MYMETA.*
 *~
+/Data-Section-Simple-*
+/.build
