@@ -16,7 +16,9 @@ sub get_data_section {
     my $self = ref $_[0] ? shift : __PACKAGE__->new(scalar caller);
 
     if (@_) {
-        return $self->get_data_section->{$_[0]};
+        my $all = $self->get_data_section;
+        return unless $all;
+        return $all->{$_[0]};
     } else {
         my $d = do { no strict 'refs'; \*{$self->{package}."::DATA"} };
         return unless defined fileno $d;
