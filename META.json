@@ -4,7 +4,7 @@
       "Tatsuhiko Miyagawa <miyagawa@bulknews.net>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Milla version v0.9.1, Dist::Zilla version 4.300032, CPAN::Meta::Converter version 2.130870",
+   "generated_by" : "Dist::Milla version v1.0.2, Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "perl_5"
    ],
@@ -13,10 +13,20 @@
       "version" : "2"
    },
    "name" : "Data-Section-Simple",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples"
+      ]
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.013"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "develop" : {
@@ -48,6 +58,11 @@
          "web" : "https://github.com/miyagawa/Data-Section-Simple"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05",
+   "x_contributors" : [
+      "Bruce Gray <bruce.gray@acm.org>",
+      "Tatsuhiko Miyagawa <miyagawa@gmail.com>",
+      "tokuhirom <tokuhirom@gmail.com>"
+   ]
 }
 

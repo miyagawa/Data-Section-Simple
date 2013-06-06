@@ -1,6 +1,7 @@
 Revision history for Perl extension Data::Section::Simple
 
 {{$NEXT}}
+        - use MakeMaker
 
 0.04  2013-03-28 17:50:48 PDT
         - Do not throw exceptions when there's no template (tokuhirom) #2
