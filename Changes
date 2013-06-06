@@ -1,6 +1,8 @@
 Revision history for Perl extension Data::Section::Simple
 
 {{$NEXT}}
+
+0.05  2013-06-06 14:13:22 PDT
         - use MakeMaker
 
 0.04  2013-03-28 17:50:48 PDT
