@@ -34,9 +34,9 @@ Data::Section::Simple is a simple module to extract data from
 # LIMITATIONS
 
 As the name suggests, this module is a simpler version of the
-excellent [Data::Section](http://search.cpan.org/perldoc?Data::Section). If you want more functionalities such as
+excellent [Data::Section](https://metacpan.org/pod/Data::Section). If you want more functionalities such as
 merging data sections or changing header patterns, use
-[Data::Section](http://search.cpan.org/perldoc?Data::Section) instead.
+[Data::Section](https://metacpan.org/pod/Data::Section) instead.
 
 This module does not implement caching (yet) which means in every
 `get_data_section` or `get_data_section($name)` this module
@@ -59,11 +59,11 @@ developing inline templates with PSGI web applications) would fail
 because the pos would be changed.
 
 If you don't like this design, again, use the superior
-[Data::Section](http://search.cpan.org/perldoc?Data::Section).
+[Data::Section](https://metacpan.org/pod/Data::Section).
 
 ## utf8 pragma
 
-If you enable [utf8](http://search.cpan.org/perldoc?utf8) pragma in the caller's package (or the package
+If you enable [utf8](https://metacpan.org/pod/utf8) pragma in the caller's package (or the package
 you're inspecting with the OO interface), the data retrieved via
 `get_data_section` is decoded, but otherwise undecoded. There's no
 reliable way for this module to programmatically know whether utf8
@@ -88,4 +88,4 @@ it under the same terms as Perl itself.
 
 # SEE ALSO
 
-[Data::Section](http://search.cpan.org/perldoc?Data::Section) [Inline::Files](http://search.cpan.org/perldoc?Inline::Files)
+[Data::Section](https://metacpan.org/pod/Data::Section) [Inline::Files](https://metacpan.org/pod/Inline::Files)

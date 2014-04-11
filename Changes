@@ -2,6 +2,9 @@ Revision history for Perl extension Data::Section::Simple
 
 {{$NEXT}}
 
+0.06  2014-04-12 06:10:47 CST
+        - Fix race condition in a forked environment (hirose31) #4
+
 0.05  2013-06-06 14:13:22 PDT
         - use MakeMaker
 
