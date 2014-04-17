@@ -20,21 +20,7 @@ sub get_data_section {
         return unless $all;
         return $all->{$_[0]};
     } else {
-        my $filepath;
-        if ($self->{package} eq 'main') {
-            my $l = 0;
-            while (my @c = caller($l++)) {
-                $filepath = $c[1];
-            }
-        } else {
-            my $pkg = $self->{package};
-            $pkg =~ s/::/\//g;
-            $pkg .= '.pm';
-            $filepath = $INC{$pkg} if $INC{$pkg};
-        }
-        return unless $filepath;
-
-        open my $d, '<', $filepath or return;
+        my $d = do { no strict 'refs'; \*{$self->{package}."::DATA"} };
         return unless defined fileno $d;
 
         seek $d, 0, 0;
