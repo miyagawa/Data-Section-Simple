@@ -2,6 +2,9 @@ Revision history for Perl extension Data::Section::Simple
 
 {{$NEXT}}
 
+0.07  2014-04-23 21:19:23 PDT
+        - revert the change in 0.06
+
 0.06  2014-04-12 06:10:47 CST
         - Fix race condition in a forked environment (hirose31) #4
 
