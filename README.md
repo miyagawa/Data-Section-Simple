@@ -78,7 +78,7 @@ Tatsuhiko Miyagawa <miyagawa@bulknews.net>
 
 Copyright 2010- Tatsuhiko Miyagawa
 
-The code to read DATA section is based on Mojo::Command get\_all\_data:
+The code to read DATA section is based on Mojo::Loader data:
 Copyright 2008-2010 Sebastian Riedel
 
 # LICENSE
